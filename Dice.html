@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    .main-title {
+        color: white; 
+        text-align: center;
+        font-family: sans-serif;
+        font-size: 20px;
+        font-weight: 600;
+        padding: 15px;
+        background-color: cornflowerblue;
+        border-radius: 5px;
+    }   
+    
+    .heading {
+        background-color: white;
+        color: cornflowerblue; 
+        font-family: sans-serif;
+        font-size: 15px;
+        font-weight: 100;
+        border-style: solid;
+        border-width: 1px;
+        border-color: cornflowerblue;
+        border-radius: 5px;
+        width: 281px;
+        margin: auto;
+        padding: 10px;
+        justify-content: center;
+        text-align: center;
+    }    
+
+    .flex-container {
+        display: -webkit-flex;
+        display: flex;
+        flex-wrap: wrap;
+        width: 350px;
+        height: 300px;
+        justify-content: center;
+        margin: auto;
+        text-align: center;
+    }
+
+    .flex-item {
+        background-color: white;
+        color: cornflowerblue; 
+        font-family: sans-serif;
+        font-size: 40px;
+        font-weight: 100;
+        text-decoration: none;
+        border-style: solid;
+        border-width: 1px;
+        border-color: cornflowerblue;
+        width: 60px;
+        height: 60px;
+        margin: 10px;
+        border-radius: 5px;
+    }
+
+    .results {
+        color: white; 
+        text-align: center;
+        font-family: sans-serif;
+        font-size: 20px;
+        font-weight: 600;
+        padding: 15px;
+        width: 281px;
+        background-color: cornflowerblue;
+        border-radius: 5px;
+        margin: auto;
+    }
+
+</style>
+<h1 class="main-title">Dice</h1>
+<br>
+<p class="heading">How many dice would you like to roll?</p>
+<br>    
+
+</head>
+<body background-color="red">
+
+<div class="flex-container" id"numberOfDice">
+    <button type="button" onclick="rollTheDice(1)" class="flex-item">1</button>
+    <button type="button" onclick="rollTheDice(2)" class="flex-item">2</button>
+    <button type="button" onclick="rollTheDice(3)" class="flex-item">3</button>
+    <button type="button" onclick="rollTheDice(4)" class="flex-item">4</button>
+    <button type="button" onclick="rollTheDice(5)" class="flex-item">5</button>
+    <button type="button" onclick="rollTheDice(6)" class="flex-item">6</button>
+    <button type="button" onclick="rollTheDice(7)" class="flex-item">7</button>
+    <button type="button" onclick="rollTheDice(8)" class="flex-item">8</button>
+    <button type="button" onclick="rollTheDice(9)" class="flex-item">9</button>
+    <button type="button" onclick="rollTheDice(10)" class="flex-item">10</button>
+    <button type="button" onclick="rollTheDice(11)" class="flex-item">11</button>
+    <button type="button" onclick="rollTheDice(12)" class="flex-item">12</button>
+    <button type="button" onclick="rollTheDice(13)" class="flex-item">13</button>
+    <button type="button" onclick="rollTheDice(14)" class="flex-item">14</button>
+    <button type="button" onclick="rollTheDice(15)" class="flex-item">15</button>
+    <button type="button" onclick="rollTheDice(16)" class="flex-item">16</button>
+</div>
+<br>
+<br>
+<p class="results" id="answerArea">-</p>
+
+<script type="text/javascript">
+function rollTheDice(numberOfDice) {
+    // var numberOfDice = document.getElementById("numberOfDice button").value;
+    var i;
+    document.getElementById("answerArea").innerHTML = "";
+    for (i = 0; i < numberOfDice; i++) {
+        var thisDiceRolled = Math.floor(Math.random() * (6 - 1) + 1);
+        document.getElementById("answerArea").innerHTML += thisDiceRolled + "     ";
+    }
+}
+</script>
+
+</body>
+</html>
